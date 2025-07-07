@@ -36,7 +36,7 @@ export default async function IndexPage() {
         })}
       </div>
       <div className="flex justify-between my-32">
-        {images?.map((img: any, idx: number) => (
+        {images?.map((img: Record<string,string>, idx: number) => (
           // eslint-disable-next-line @next/next/no-img-element
           <div key={img.alt} className="h-[300px] max-w-[350px]">
             <img key={idx} src={urlFor(img).url()} alt={img.alt} className="border-[1px] border-gray-400 rounded-lg h-[300px] w-[350px]"/>
